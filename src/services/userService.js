@@ -21,7 +21,6 @@ export default class UserService {
                     if (!this.checkEmployeeValidityForErrors(user)) {
                         this.employees.push(user)
                     }
-                    this.employees.push(user)
                     break;
                 default:
                     this.errors.push(new DataError("Wrong user type", user))
@@ -90,7 +89,8 @@ export default class UserService {
     }
 
     getCustomerById(id) {
-        return this.customers.find(u => u.id === id)
+        const data = this.customers.find(u => u.id == id)
+        return data
     }
 
     getCustomerSorted() {

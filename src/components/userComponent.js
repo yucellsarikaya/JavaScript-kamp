@@ -12,12 +12,6 @@ let user1 = new User(1, "Yücel", "Sarıkaya", "Ankara")
 let user2 = new User(2, "Özlem", "Sarıkaya", "Muğla")
 //userService.add(user1)
 //userService.add(user2)
-console.log("==================================================")
-console.log(userService.listCustomers())
-console.log("==================================================")
-console.log(userService.getCustomerById(2))
-console.log("==================================================")
-
 
 
 let customer = { id: 2, firstName: "Yücel" }
@@ -34,4 +28,6 @@ userService.add(customerToAdd)
 console.log("Customer: ", userService.customers)
 console.log("Employee: ", userService.employees)
 console.log("Erros: ", userService.errors)
+console.log(userService.listCustomers())
 console.log(userService.getCustomerSorted())
+console.log(userService.getCustomerById(1))
